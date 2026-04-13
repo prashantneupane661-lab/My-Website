@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyan Jyoti Pathshala | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- ========================================================= -->
+    <!-- ======================= HEADER ========================== -->
+    <!-- ========================================================= -->
+
+    <!-- TOP BAR -->
+    <div class="top-bar-home">
+        <div class="container-home top-flex-home">
+            <span><a href="mailto:gyanjyotipathshalabhamake82@gmail.com">gyanjyotipathshalabhamake82@gmail.com</a> 
+            <a href="tel:+977 9857825441">| 9857825441</a></span>
+            
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="nav-header-home">
+        <div class="container-home nav-home">
+            <img src="photos/logo.jpeg" alt="Logo" class="logo-home">
+            <ul class="menu-home">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="notices.html">Notices</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <!-- HAMBURGER MENU -->
+            <div class="hamburger-home" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================================= -->
+    <!-- ======================= BODY ============================ -->
+    <!-- ========================================================= -->
+
+    <!-- HERO -->
+    <section class="hero-home">
+        <video autoplay muted loop id="bg-video-home">
+            <source src="photos/pathshalavdo.mp4" type="video/mp4">
+        </video>
+        <div class="container-home hero-box-home">
+            <h2>Welcome to</h2>
+            <h1>Gyan Jyoti Pathshala</h1>
+            <p>Excellence in Education for a Brighter Future</p>
+            <a href="about.html" class="btn-home">Learn More</a>
+        </div>
+    </section>
+
+    <!-- ACTION BOXES -->
+    <section class="actions-home container-home">
+        <div class="action-box-home blue-home">
+            <h3>🎓 Admissions Open</h3>
+            <a href="academic.html" class="btn-white-home">Apply Now</a>
+        </div>
+        <div class="action-box-home green-home">
+            <h3>📘 Our Programs</h3>
+            <a href="courses.html" class="btn-white-home">View Courses</a>
+        </div>
+        <div class="action-box-home dark-home">
+            <h3>💻 Student Portal</h3>
+            <a href="#" class="btn-white-home">Login Now</a>
+        </div>
+    </section>
+
+    <!-- NEWS -->
+    <section class="news-home container-home">
+        <h2>Latest News & Events</h2>
+        <div class="news-grid-home">
+
+            <div class="news-card-home">
+                <img src="photos/anni2.JPG" alt="">
+                <img src="photos/anni.JPG" alt="">
+                <h4>On the occasion of 32<sup>nd</sup> Anniversary</h4>
+                <p class="date-home">2082, Magh-17</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+
+            <div class="news-card-home">
+                <img src="photos/sport.jpeg" alt="">
+                <h4>Annual Sports Meet 2082</h4>
+                <p class="date-home">2082, Magh-12,13</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+
+            <div class="news-card-home">
+                <img src="photos/prize2.jpg" alt="">
+                <h4>Prize distribution of Annual Sport Meet 2082</h4>
+                <p class="date-home">2082, Magh-23</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRINCIPAL + GALLERY -->
+    <section class="two-col-home container-home">
+
+        <div class="left-box-home">
+            <h2>Principal's Message</h2>
+            <div class="principal-home">
+                <img src="photos/principal.jpeg" alt="Principal" class="principal-img-home">
+                <div>
+                    <h3>Welcome to our school!</h3>
+                    <p>We are committed to providing excellent education and fostering the development of students.</p>
+                    <a href="#" class="btn-small-home">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-box-home">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid-home">
+                <img src="photos/p2.JPG" alt="">
+                <img src="photos/g.JPG" alt="">
+                <img src="photos/a.JPG" alt="">
+                <img src="photos/l.JPG" alt="">
+                <img src="photos/l2.JPG" alt="">
+                <img src="photos/e.JPG" alt="">
+                <img src="photos/r.JPG" alt="">
+                <img src="photos/y.JPG" alt="">
+                <img src="photos/p4.jpeg" alt="">
+                <img src="photos/sport.jpeg" alt="">
+            </div>
+            <a href="gallery.html" class="btn-small-home">View Gallery</a>
+        </div>
+
+    </section>
+
+    <!-- ACADEMIC PHOTO SECTION -->
+    <section class="academic-home container-home">
+        <h1 class="academic-title-home"> Our Academic Programs</h1>
+        <h4 class="academic-title-home">Quality Education from Nursery through Grade 10</h4>
+        <div class="academic-grid-home">
+            <div class="academic-card-home">
+                <img src="photos/nursery.png" alt="">
+                <h3>Pre School (Nursery - UKG)</h3>
+                <p>A joyful beginning where children learn, explore, and grow through creative activities.</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+
+            <div class="academic-card-home">
+                <img src="photos/basic.jpeg" alt="">
+                <h3>Basic Level (Grade 1-8)</h3>
+                <p>Developing strong academic foundations,critical thinking, and essential life skills.</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+
+            <div class="academic-card-home">
+                <img src="photos/secondary.jpeg" alt="">
+                <h3>Secondary Level(Grade 9-10)</h3>
+                <p>Focused academic excellence with structured preparation foe SEE and future goals.</p>
+                <a href="gallery.html" class="btn-small-home">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= -->
+    <!-- ======================= FOOTER ========================== -->
+    <!-- ========================================================= -->
+
+    <footer>
+    <div class="footer-container">
+        <div class="footer-grid">
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Courses</a>
+                <a href="ad.html">Admissions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <a href="notices.html">Notice Board</a>
+                <a href="#">Academic Calendar</a>
+                <a href="#">Downloads</a>
+                <a href="#">FAQs</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>📍 Tulsipur-01, Bhamake, Dang</p>
+                <div class="contact-info">
+                    <span>✉️ <a href="mailto:gyanjyotipathshalabhamake82@gmail.com">gyanjyotipathshalabhamake82@gmail.com</a></span>
+                    <span>📞 <a href="tel:+9779810173111">+977-9810173111</a></span>
+                </div>
+            </div>
+
+           <div class="footer-box">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com/pandkpathshala.bhamake" class="social-icon">
+        <i class="fa fa-facebook"></i>
+    </a>
+</div>
+
+        </div>
+
+      
+    </div>
+      <p class="copy">
+            © 2026 GYAN JYOTI PATHSHALA. All Rights Reserved.<br>
+            Built by <a href="https://www.prashant16.com.np/">Prashant Neupane</a>
+        </p>
+</footer>
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-home');
+            const menu = document.querySelector('.menu-home');
+            menu.classList.toggle('active-home');
+            nav.classList.toggle('responsive-home');
+        }
+    </script>
+
+</body>
+</html>

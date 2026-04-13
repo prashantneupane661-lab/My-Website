@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyan Jyoti Pathshala | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- ========================================================= -->
+    <!-- ======================= HEADER ========================== -->
+    <!-- ========================================================= -->
+
+    <!-- TOP BAR -->
+    <div class="top-bar-home">
+        <div class="container-home top-flex-home">
+            <span>gyanjyotipathshalabhamake82@gmail.com | 9857825441</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="nav-header-home">
+        <div class="container-home nav-home">
+            <img src="photos/logo.jpeg" alt="Logo" class="logo-home">
+            <ul class="menu-home">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="notices.html">Notices</a></li>
+                <li><a href="gallery.html"class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+
+            <!-- HAMBURGER MENU -->
+            <div class="hamburger-home" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+
+
+
+<!-- HERO -->
+<section class="gallery-hero">
+  <div class="hero-content">
+    <h1>Photo Gallery</h1>
+    <p>Explore memorable school moments, activities and celebrations.</p>
+    <a href="#gallery" class="hero-btn">Explore Gallery</a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-page" id="gallery">
+
+<h2 class="main-title">School Gallery</h2>
+
+<!-- SEARCH -->
+<input type="text"
+       id="coverSearch"
+       class="search-box"
+       placeholder="Search: sports, fieldtrip, result day..."
+       onkeyup="searchCover()">
+
+<!-- COVER GALLERY -->
+<div class="cover-gallery" id="coverGallery">
+  <div class="cover-grid">
+
+    <div class="cover-item" data-tag="sports" onclick="openGallery(1)">
+      <img src="photos/sport.jpeg">
+      <div class="overlay">Sports Day</div>
+    </div>
+
+    <div class="cover-item" data-tag="fieldtrip" onclick="openGallery(2)">
+      <img src="photos/fieldtrip.jpeg">
+      <div class="overlay">Field Trip</div>
+    </div>
+
+    <div class="cover-item" data-tag="result day" onclick="openGallery(3)">
+      <img src="photos/prize2.jpg">
+      <div class="overlay">Result Day</div>
+    </div>
+
+    <div class="cover-item" data-tag="tour" onclick="openGallery(4)">
+      <img src="photos/l.JPG">
+      <div class="overlay">Educational Tour</div>
+    </div>
+
+    <div class="cover-item" data-tag="exhibition" onclick="openGallery(5)">
+      <img src="photos/logo.jpeg">
+      <div class="overlay">Exhibition</div>
+    </div>
+
+    <div class="cover-item" data-tag="cultural" onclick="openGallery(6)">
+      <img src="photos/image1.jpeg">
+      <div class="overlay">Cultural Program</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- INNER GALLERY -->
+<div class="inner-gallery" id="innerGallery">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+  <div class="inner-grid" id="innerGrid"></div>
+</div>
+
+
+
+</section>
+<div class="container">
+
+    <!-- MAIN CARD VIEW -->
+    <div id="main">
+        <div class="title">Video Gallery</div>
+        <div class="subtitle">Watch memorable moments</div>
+
+        <div class="grid">
+
+            <div class="card" onclick="openSection('sec1')">
+                <div class="tag">Infrastructure</div>
+                Welcome Video<br>From Gyan Jyoti Pathshala
+                <br><small>3 Videos</small>
+            </div>
+
+            <div class="card grey" onclick="openSection('sec2')">
+                <div class="tag">Category 2</div>
+                Classroom Moments
+                <br><small>3 Videos</small>
+            </div>
+
+            <div class="card grey" onclick="openSection('sec3')">
+                <div class="tag">Category 3</div>
+                Sports Highlights
+                <br><small>3 Videos</small>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- INSIDE VIDEO SECTIONS -->
+
+    <!-- SECTION 1 -->
+    <div id="sec1" class="video-section">
+        <h2>Category 1 – Videos</h2>
+
+        <!-- 🔵 Replace these 3 links with YOUR VIDEO LINKS -->
+        <iframe src="VIDEO_LINK_1"></iframe>
+        <iframe src="VIDEO_LINK_2"></iframe>
+        <iframe src="VIDEO_LINK_3"></iframe>
+
+        <div class="back" onclick="goBack()">← Back</div>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div id="sec2" class="video-section">
+        <h2>Category 2 – Videos</h2>
+
+        <!-- Replace -->
+        <video src="photos/pathshalavdo.mp4"controls></video>
+        <iframe src="VIDEO_LINK_5"></iframe>
+        <iframe src="VIDEO_LINK_6"></iframe>
+
+        <div class="back" onclick="goBack()">← Back</div>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div id="sec3" class="video-section">
+        <h2>Category 3 – Videos</h2>
+
+        <!-- Replace -->
+        <iframe src="VIDEO_LINK_7"></iframe>
+        <iframe src="VIDEO_LINK_8"></iframe>
+        <iframe src="VIDEO_LINK_9"></iframe>
+
+        <div class="back" onclick="goBack()">← Back</div>
+    </div>
+
+</div>
+
+<script>
+/* SEARCH FILTER */
+function searchCover(){
+  let input = document.getElementById("coverSearch").value.toLowerCase();
+  let items = document.querySelectorAll(".cover-item");
+
+  items.forEach(item=>{
+    let tag = item.dataset.tag.toLowerCase();
+    item.style.display = tag.includes(input) ? "block" : "none";
+  });
+}
+
+/* DEMO INNER GALLERY IMAGES */
+const galleries = {
+  1:["photos/sport.jpeg","photos/sport.jpeg","photos/sport.jpeg"],
+  2:["photos/prize1.jpg","photos/prize1.jpg","photos/prize1.jpg"],
+  3:["photos/prize2.jpg","photos/prize2.jpg","photos/prize2.jpg"],
+  4:["photos/l.JPG","photos/l.JPG","photos/l.JPG"],
+  5:["photos/logo.jpeg","photos/logo.jpeg","photos/logo.jpeg"],
+  6:["photos/image1.jpeg","photos/image1.jpeg","photos/image1.jpeg"]
+};
+
+function openGallery(id){
+  document.getElementById("coverGallery").style.display="none";
+  document.getElementById("innerGallery").style.display="block";
+
+  let grid = document.getElementById("innerGrid");
+  grid.innerHTML="";
+
+  galleries[id].forEach(src=>{
+    let img=document.createElement("img");
+    img.src=src;
+    grid.appendChild(img);
+  });
+}
+
+function goBack(){
+  document.getElementById("coverGallery").style.display="block";
+  document.getElementById("innerGallery").style.display="none";
+  document.querySelectorAll(".video-section").forEach(sec => sec.style.display = "none");
+    document.getElementById("main").style.display = "block";
+}
+
+function openSection(id) {
+    document.getElementById("main").style.display = "none";
+    document.getElementById(id).style.display = "block";
+}
+
+
+</script>
+
+
+
+
+ <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-grid">
+
+            <div class="footer-box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="courses.html">Courses</a>
+                <a href="ad.html">Admissions</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Useful Links</h3>
+                <a href="notices.html">Notice Board</a>
+                <a href="#">Academic Calendar</a>
+                <a href="#">Downloads</a>
+                <a href="#">FAQs</a>
+            </div>
+
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>📍 Tulsipur-01, Bhamake, Dang</p>
+                <div class="contact-info">
+                    <span>✉️ <a href="mailto:gyanjyotipathshalabhamake82@gmail.com">gyanjyotipathshalabhamake82@gmail.com</a></span>
+                    <span>📞 <a href="tel:+9779810173111">+977-9810173111</a></span>
+                </div>
+            </div>
+
+           <div class="footer-box">
+    <h3>Follow Us</h3>
+    <a href="https://www.facebook.com/pandkpathshala.bhamake" class="social-icon">
+        <i class="fa fa-facebook"></i>
+    </a>
+</div>
+
+        </div>
+
+      
+    </div>
+      <p class="copy">
+            © 2026 GYAN JYOTI PATHSHALA. All Rights Reserved.<br>
+            Built by <a href="https://www.prashant16.com.np/">Prashant Neupane</a>
+        </p>
+</footer>
+    <!-- MOBILE MENU SCRIPT -->
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('.nav-home');
+            const menu = document.querySelector('.menu-home');
+            menu.classList.toggle('active-home');
+            nav.classList.toggle('responsive-home');
+        }
+    </script>
+
+</body>
+</html>
